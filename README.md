@@ -99,3 +99,11 @@ const g = gw.create({
     }
 });
 ```
+
+## Code of Conduct
+
+Glue42 has adopted a Code of Conduct that we expect project participants to adhere to. Please [read the full text](https://github.com/Glue42/core/blob/master/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+
+## License
+
+Glue42 Core Gateways is [MIT Licensed](https://github.com/Glue42/glue-core-gateways/blob/master/LICENSE).
