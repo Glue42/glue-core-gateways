@@ -1,0 +1,36 @@
+{:source-paths ["../common/src" "src"]
+
+ :dependencies [[com.tick42.gateway/ghostwheel-stub "3.0.8"]
+                [com.tick42.gateway/agm-domain "3.0.8" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/activity-domain "3.0.8" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/bus-domain "3.0.8" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/metrics-domain "3.0.8" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/global-domain "3.0.8" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/context-domain "3.0.8" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/common "3.0.8" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/metrics-core "3.0.8" :exclusions [gnl/ghostwheel]]
+
+                [com.tick42.gateway/basic-auth "3.0.8"]
+
+                ;; clustering
+                [com.tick42.gateway/local-node "3.0.8" :exclusions [gnl/ghostwheel]]
+
+                [com.taoensso/timbre "4.10.0"]
+
+                [com.google.guava/guava "22.0"]
+                [cider/cider-nrepl "0.21.0"]
+
+                [funcool/promesa "5.1.0"]]
+
+ :js-options {:js-package-dirs ["node_modules" "../../node_modules"]}
+
+ :builds       {:web   {:target     :browser
+                        :output-dir "web"
+                        :modules    {:gateway-web {:entries [gateway-web.core]}}
+                        :release    {:compiler-options {:optimizations :advanced}}}
+                :node {:target     :node-library
+                       :output-to  "node/gateway-web.js"
+                       :output-dir "node"
+                       :modules    {:gateway-web {:entries [gateway-web.core]}}
+                       :release    {:compiler-options {:optimizations           :advanced}}
+                       :exports-fn gateway-web.core/generate-exports}}}

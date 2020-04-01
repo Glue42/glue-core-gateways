@@ -1,0 +1,39 @@
+{
+  "private": false,
+  "name": "@glue42/gateway-web",
+  "description": "Web build of the Glue42 Gateway",
+  "version": "3.0.8-beta.8",
+  "files": [
+    "web/*.js",
+    "node/*.js"
+  ],
+  "directories": {},
+  "scripts": {
+    "build": "npx shadow-cljs release web node"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.8.86",
+    "source-map-support": "0.4.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Glue42/glue-core-gateways.git"
+  },
+  "keywords": [
+    "glue",
+    "glue42",
+    "desktop",
+    "interop",
+    "context"
+  ],
+  "author": {
+    "name": "Glue42",
+    "url": "https://www.glue42.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "gitHead": "f048866efd08068bce7dbef9e2ff993f03da51ee"
+}

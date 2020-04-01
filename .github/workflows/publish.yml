@@ -1,0 +1,74 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "13.x"
+          registry-url: https://registry.npmjs.org/          
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: maven
+
+      - name: Cache Shadow for PWA
+        uses: actions/cache@v1
+        with:
+          path: pwa-gateway/.shadow-cljs
+          key: ${{ runner.os }}-shadow-cljs-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-shadow-cljs-
+
+      - name: Cache Shadow for WS
+        uses: actions/cache@v1
+        with:
+          path: ws-gateway/.shadow-cljs
+          key: ${{ runner.os }}-shadow-cljs-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-shadow-cljs-
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Building PWA Gateway
+        working-directory: ./pwa-gateway
+        run: |
+          npm install
+          npx shadow-cljs release pwa 
+          npm pack
+
+      - name: Building WS Gateway
+        working-directory: ./ws-gateway
+        run: |
+          npm install 
+          npx shadow-cljs release app 
+          npm pack
+
+      - name: Publishing the PWA Gateway
+        working-directory: ./pwa-gateway
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: Publishing the WS Gateway
+        working-directory: ./ws-gateway
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

@@ -1,0 +1,45 @@
+{
+  "private": false,
+  "name": "@glue42/gateway-ws",
+  "description": "Node.js compatible Glue42 Gateway with Websocket support",
+  "version": "3.0.8-beta.8",
+  "dependencies": {
+    "ip": "^1.1.5",
+    "reconnecting-websocket": "^4.4.0",
+    "source-map-support": "0.4.6",
+    "ws": "^7.2.3"
+  },
+  "files": [
+    "lib/gateway-ws*.js"
+  ],
+  "main": "lib/gateway-ws.js",
+  "devDependencies": {
+    "cookies": "0.7.1",
+    "express": "4.16.4",
+    "shadow-cljs": "^2.8.86"
+  },
+  "scripts": {
+    "build": "npx shadow-cljs release app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Glue42/glue-core-gateways.git"
+  },
+  "keywords": [
+    "glue",
+    "glue42",
+    "desktop",
+    "interop",
+    "context"
+  ],
+  "author": {
+    "name": "Glue42",
+    "url": "https://www.glue42.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "gitHead": "f048866efd08068bce7dbef9e2ff993f03da51ee"
+}
