@@ -4,6 +4,8 @@ This is a component of the Glue42 Core project https://github.com/Glue42/core
 
 ## Building
 
+![Build](https://github.com/Glue42/glue-core-gateways/workflows/Build/badge.svg)
+
 The Glue Gateways project uses lerna to build. You'll need to execute `lerna bootstrap` once and then `lerna run build`.
 
 ## Configuration
