@@ -2,7 +2,7 @@
   "private": false,
   "name": "@glue42/gateway-ws",
   "description": "Node.js compatible Glue42 Gateway with Websocket support",
-  "version": "3.0.8",
+  "version": "3.0.9-alpha.0",
   "dependencies": {
     "ip": "^1.1.5",
     "reconnecting-websocket": "^4.4.0",
