@@ -1,19 +1,19 @@
 {:source-paths ["../common/src"  "src"]
 
- :dependencies [[com.tick42.gateway/ghostwheel-stub "3.0.9"]
-                [com.tick42.gateway/agm-domain "3.0.9" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/activity-domain "3.0.9" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/bus-domain "3.0.9" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/metrics-domain "3.0.9" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/global-domain "3.0.9" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/context-domain "3.0.9" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/common "3.0.9" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/metrics-core "3.0.9" :exclusions [gnl/ghostwheel]]
+ :dependencies [[com.tick42.gateway/ghostwheel-stub "3.0.10"]
+                [com.tick42.gateway/agm-domain "3.0.10" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/activity-domain "3.0.10" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/bus-domain "3.0.10" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/metrics-domain "3.0.10" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/global-domain "3.0.10" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/context-domain "3.0.10" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/common "3.0.10" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/metrics-core "3.0.10" :exclusions [gnl/ghostwheel]]
 
-                [com.tick42.gateway/basic-auth "3.0.9"]
+                [com.tick42.gateway/basic-auth "3.0.10"]
 
                 ;; clustering
-                [com.tick42.gateway/local-node "3.0.9" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/local-node "3.0.10" :exclusions [gnl/ghostwheel]]
 
                 [com.taoensso/timbre "4.10.0"]
 
