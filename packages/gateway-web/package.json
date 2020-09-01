@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "shadow-cljs": "^2.10.18",
-    "source-map-support": "0.4.6"
+    "source-map-support": "0.5.19"
   },
   "repository": {
     "type": "git",
