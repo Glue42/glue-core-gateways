@@ -2,7 +2,7 @@
   "private": false,
   "name": "@glue42/gateway-web",
   "description": "Web build of the Glue42 Gateway",
-  "version": "3.0.13-beta.1",
+  "version": "3.0.13-beta.2",
   "files": [
     "web/*.js",
     "node/*.js"
