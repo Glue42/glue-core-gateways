@@ -40,20 +40,20 @@ jobs:
       - run: npm i -g lerna
       - run: npm i -g yarn
 
-      - uses: DeLaGuardo/clojure-lint-action@v1
-        with:
-          clj-kondo-args: --lint packages/common/src
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - uses: DeLaGuardo/clojure-lint-action@v1
+      #   with:
+      #     clj-kondo-args: --lint packages/common/src
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: DeLaGuardo/clojure-lint-action@v1
-        with:
-          clj-kondo-args: --lint packages/common/src
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - uses: DeLaGuardo/clojure-lint-action@v1
+      #   with:
+      #     clj-kondo-args: --lint packages/common/src
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: DeLaGuardo/clojure-lint-action@v1
-        with:
-          clj-kondo-args: --lint packages/common/src
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - uses: DeLaGuardo/clojure-lint-action@v1
+      #   with:
+      #     clj-kondo-args: --lint packages/common/src
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: bootstrapping lerna
         run: lerna bootstrap
