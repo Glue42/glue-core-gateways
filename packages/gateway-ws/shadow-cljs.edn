@@ -1,19 +1,19 @@
 {:source-paths ["../common/src"  "src"]
 
- :dependencies [[com.tick42.gateway/ghostwheel-stub "3.0.10"]
-                [com.tick42.gateway/agm-domain "3.0.10" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/activity-domain "3.0.10" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/bus-domain "3.0.10" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/metrics-domain "3.0.10" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/global-domain "3.0.10" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/context-domain "3.0.10" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/common "3.0.10" :exclusions [gnl/ghostwheel]]
-                [com.tick42.gateway/metrics-core "3.0.10" :exclusions [gnl/ghostwheel]]
+ :dependencies [[com.tick42.gateway/ghostwheel-stub "3.0.12"]
+                [com.tick42.gateway/agm-domain "3.0.12" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/activity-domain "3.0.12" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/bus-domain "3.0.12" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/metrics-domain "3.0.12" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/global-domain "3.0.12" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/context-domain "3.0.12" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/common "3.0.12" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/metrics-core "3.0.12" :exclusions [gnl/ghostwheel]]
 
-                [com.tick42.gateway/basic-auth "3.0.10"]
+                [com.tick42.gateway/basic-auth "3.0.12"]
 
                 ;; clustering
-                [com.tick42.gateway/local-node "3.0.10" :exclusions [gnl/ghostwheel]]
+                [com.tick42.gateway/local-node "3.0.12" :exclusions [gnl/ghostwheel]]
 
                 [com.taoensso/timbre "4.10.0"]
 
@@ -21,9 +21,9 @@
                 [cider/cider-nrepl "0.21.0"]
 
                 [funcool/promesa "5.1.0"]]
- 
+
  :js-options {:js-package-dirs ["node_modules" "../../node_modules"]}
- 
+
  :builds       {:app {:target     :node-library
                       :output-to  "lib/gateway-ws.js"
                       :release    {:compiler-options {:optimizations :advanced}}

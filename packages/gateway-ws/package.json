@@ -6,7 +6,7 @@
   "dependencies": {
     "ip": "^1.1.5",
     "reconnecting-websocket": "^4.4.0",
-    "ws": "^7.2.3"
+    "ws": "^7.5.0"
   },
   "files": [
     "lib/gateway-ws*.js"
@@ -15,7 +15,7 @@
   "devDependencies": {
     "cookies": "0.8.0",
     "express": "4.17.1",
-    "shadow-cljs": "^2.10.18",
+    "shadow-cljs": "^2.14.5",
     "source-map-support": "0.5.19"
   },
   "scripts": {

@@ -2,7 +2,7 @@
   "name": "glue-core-gateways",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.22.1",
+    "lerna": "^4.0.0",
     "lerna-changelog": "^1.0.1",
     "dot-prop": "^4.2.1"
   },
